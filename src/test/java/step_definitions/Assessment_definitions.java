@@ -72,13 +72,13 @@ public class Assessment_definitions {
                 if(i == 1){
                     String s=assessment.Que1.getText();
                     System.out.println(s);
-                    if(s.contains("â\u0080")||s.contains("Â"))   base.takeSnapShot(base.driver,"C://Users//Uk//Desktop//WFH//LOM//cucumber//M-Tutor_Cucumberframework//src//test//resources//Screenshot//"+assessment.asstitle.getText()+"//"+assessment.asstitle.getText()+"_ss_"+timestamp()+".png");
+                    if(s.contains("â\u0080")||s.contains("Â"))   base.takeSnapShot(base.driver,"F://WFH//Automate//M-Tutor_Cucumberframework//src//test//resources//Screenshot//"+assessment.asstitle.getText()+"//"+assessment.asstitle.getText()+"_ss_"+timestamp()+".png");
                         base.javaclcik(assessment.ans);
                         assessment.submit.click();
                 } else{
                     String s=assessment.Que2.getText();
                     System.out.println(s);
-                    if(s.contains("â\u0080")||s.contains("Â"))   base.takeSnapShot(base.driver,"C://Users//Uk//Desktop//WFH//LOM//cucumber//M-Tutor_Cucumberframework//src//test//resources//Screenshot//"+assessment.asstitle.getText()+"//"+assessment.asstitle.getText()+"_ss_"+timestamp()+".png");
+                    if(s.contains("â\u0080")||s.contains("Â"))   base.takeSnapShot(base.driver,"F://WFH//Automate//M-Tutor_Cucumberframework//src//test//resources//Screenshot//"+assessment.asstitle.getText()+"//"+assessment.asstitle.getText()+"_ss_"+timestamp()+".png");
                         base.javaclcik(assessment.ans2);
                         assessment.submit.click();
                     assessment.scrolltop.click();

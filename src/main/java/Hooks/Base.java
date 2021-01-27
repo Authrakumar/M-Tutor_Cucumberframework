@@ -5,6 +5,7 @@ import cucumber.api.java.Before;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -27,8 +28,10 @@ public class Base {
 
     @Before
     public void lauch() {
-        System.setProperty("webdriver.chrome.driver", "C://Users//Uk//Desktop//Drivers//chromedriver.exe");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "F://WFH//Automate//M-Tutor_Cucumberframework//chromedriver.exe");
+        ChromeOptions chromeOptions=new ChromeOptions();
+       // chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get("https://m-tutor.com/");
@@ -87,7 +90,5 @@ public class Base {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].click();", e);
     }
-
-
 }
 

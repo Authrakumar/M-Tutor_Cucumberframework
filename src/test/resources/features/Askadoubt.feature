@@ -13,8 +13,8 @@ Feature: Ask Page
     And Add attachment "<attachment path>"
     Then Press Submit Button
     Examples:
-      | product | Subject | Doubt | attachment path |
-      |1        |1        |uk     |               |
-      |2        |1        |uk     |               |
-      |3        |1        |uk     |               |
+      | product | Subject | Doubt |attachment path |
+      |1        |1        |uk     |                |
+      |2        |1        |uk     |                |
+      |3        |1        |uk     |                |
 
