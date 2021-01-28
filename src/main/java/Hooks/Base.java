@@ -17,6 +17,7 @@ import ru.yandex.qatools.ashot.AShot;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Base {
@@ -47,20 +48,20 @@ public class Base {
     public WebDriverWait wait;
 
     public void waitForVisibility(WebElement e) {
-        wait = new WebDriverWait (driver, 60);
         wait.until(ExpectedConditions.visibilityOf(e));
     }
     public void implicitwaittime() {
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
     }
     public void elementtobeclickable(WebElement e) {
-        wait = new WebDriverWait (driver, 30);
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(e));
     }
     public void click(WebElement e){
         waitForVisibility(e);
         e.click();
     }
+
     public void clickifclickable(WebElement e){
         waitForVisibility(e);
         e.click();

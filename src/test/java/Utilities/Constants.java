@@ -4,6 +4,17 @@ public class Constants {
     //Landing Page
     public static String landtitle="M-Tutor";
 
+    //Contactus Title
+    public static String Contactustitle="Write to us | We'd Love to Hear From You";
+    public static String Firstnameempty="Please enter your First Name.";
+    public static String Lastnameempty="Please enter your Last Name.";
+    public static String Emailempty="Please enter your Email ID.";
+    public static String Mobempty="Please enter your Mobile Number.";
+    public static String Msgempty="Please enter your Message";
+    public static String consuccess="Thank you for contacting us. We will get back to you soon.";
+    public static String Invalidmail="Please enter your valid Email ID.";
+    public static String Invalidmob="Please enter a valid Mobile Number.";
+
     //Login Page
     public static String logintitle="Login | Keep Learning With Our Online Materials";
     public static String emptymailerror="Please enter your Email ID";
