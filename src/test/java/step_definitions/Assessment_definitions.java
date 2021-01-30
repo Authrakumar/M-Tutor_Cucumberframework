@@ -2,6 +2,9 @@ package step_definitions;
 
 import Hooks.Base;
 import Utilities.Constants;
+import cucumber.api.PendingException;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -91,6 +94,31 @@ public class Assessment_definitions {
 
     public String timestamp() {
         return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
+    }
+    //----------------Scenario 2---------------------------------------//
+    @Given("^Navigate to home page$")
+    public void navigateToHomePage() throws Throwable {
+        i_am_home_page();
+    }
+    @When("^Press Assessment navigation$")
+    public void pressAssessmentNavigation() throws Throwable {
+        press_Assessment_navigation_link();
+    }
+    @Then("^User Should direct to the Assessment page$")
+    public void userShouldDirectToTheAssessmentPage() throws Throwable {
+        user_Should_Navigate_to_Assessment_page();
+    }
+    @And("^Select Sub & Ass \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void selectSubAssAnd(String sub, String test) throws Throwable {
+        assessment.sub2select(sub);
+        Thread.sleep(2000);
+        assessment.sub3select(test);
+        Thread.sleep(2000);
+        assessment.instbtn.click();
+    }
+    @Then("^Finish a Test$")
+    public void finishATest() throws Throwable {
+        complete_a_Test();
     }
 }
 

@@ -48,6 +48,7 @@ public class Base {
     public WebDriverWait wait;
 
     public void waitForVisibility(WebElement e) {
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(e));
     }
     public void implicitwaittime() {
