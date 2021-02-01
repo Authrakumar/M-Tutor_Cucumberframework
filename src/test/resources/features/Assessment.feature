@@ -28,9 +28,6 @@ Feature: Assessment
       |ECE Semester 5|Simulation and Modelling|Start Now|
       |ECE Semester 7|Embedded Systems Design|Start Now|
       |ECE Semester 7|Microwave Engineering|Start Now|
-
-
-
   @subjetTest
   Scenario Outline: Assessment Inside Subject
     Given Navigate to home page
